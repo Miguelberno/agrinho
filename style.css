@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.game-board {
+  width: 100%;
+  height: 850px;
+  border-bottom: 20px solid #2beb11;
+  margin: 0 auto;
+  position: absolute;
+  overflow: hidden;
+  background: linear-gradient(#05b6fc, #e1e3e4);
+}
+
+.pipe {
+  position: absolute;
+  bottom: 0;
+  width: 80px;
+  animation: pipe-animation 1.5s infinite linear;
+}
+
+.pipe2 {
+  right: -300px;
+  animation-delay: 0.75s;
+  position: absolute;
+  bottom: 0;
+  width: 80px;
+  animation: pipe-animation 1.5s infinite linear;
+}
+
+.agrinho {
+  width: 170px;
+  position: absolute;
+  bottom: 0;
+}
+
+.jump {
+  animation: jump 500ms ease-out;
+}
+
+.clouds {
+  width: 550px;
+  position: absolute;
+  animation: clouds-animation 20s infinite linear;
+}
+
+
+.welcome {
+  position: absolute;
+  width: 800px;
+  height: auto;
+  right: -800px;
+  animation: moverWelcome 20s linear infinite	;
+  animation-delay: 0s;
+}
+
+.trator {
+  position: absolute;
+  width: 500px;
+  height: auto;
+  right: -100vw;
+  animation: moverTrator 20s linear infinite;
+  animation-delay: 10s;
+}
+
+.celeiro {
+  position: absolute;
+  width: 500px;
+  height: auto;
+  right: -100vw;
+  animation: moverCeleiro 20s linear infinite;
+  animation-delay: 13s;
+}
+
+.moinho {
+  position: absolute;
+  width: 100vw;
+  height: auto;
+  right: -100vw;
+  animation: moverMoinho 20s linear forwards;
+  animation-delay: 16s;
+}
+
+.casa {
+ position: absolute;
+  width: 100vw;
+  height: auto;
+  right: -100vw;
+  animation: moverCasa 20s linear forwards;
+  animation-delay: 19s;
+}
+
+.predios {
+   position: absolute;
+  width: 100vw;
+  height: auto;
+  right: -100vw;
+  animation: moverPredios 20s linear forwards;
+  animation-delay: 29s;
+}
+
+.predio {
+  position: absolute;
+  width: 100vw;
+  height: auto;
+  right: -100vw;
+  animation: moverPredio 20s linear forwards;
+  animation-delay: 32s;
+}
+
+@keyframes moverWelcome {
+  0% { right: -100vw; opacity: 0; }
+  10% { right: -10vw; opacity: 1; }
+  40% { right: 0vw; opacity: 1; }
+  70% { right: 110vw; opacity: 0; }
+  100% { right: 110vw; opacity: 0; }
+}
+
+@keyframes moverTrator {
+  0% { right: -100vw; opacity: 0; }
+  10% { right: -10vw; opacity: 1; }
+  40% { right: 0vw; opacity: 1; }
+  70% { right: 110vw; opacity: 0; }
+  100% { right: 110vw; opacity: 0; }
+}
+
+@keyframes moverCeleiro {
+  0% { right: -100vw; opacity: 0; }
+  10% { right: -10vw; opacity: 1; }
+  40% { right: 0vw; opacity: 1; }
+  70% { right: 110vw; opacity: 0; }
+  100% { right: 110vw; opacity: 0; }
+}
+
+@keyframes moverMoinho {
+  0% { right: -100vw; opacity: 0; }
+  10% { right: -10vw; opacity: 1; }
+  40% { right: 0vw; opacity: 1; }
+  70% { right: 110vw; opacity: 0; }
+  100% { right: 110vw; opacity: 0; }
+}
+
+@keyframes moverCasa {
+  0% { right: -100vw; opacity: 0; }
+  10% { right: -10vw; opacity: 1; }
+  40% { right: 0vw; opacity: 1; }
+  70% { right: 110vw; opacity: 0; }
+  100% { right: 110vw; opacity: 0; }
+}
+
+@keyframes moverPredios {
+  0% { right: -100vw; opacity: 0; }
+  10% { right: -10vw; opacity: 1; }
+  40% { right: 0vw; opacity: 1; }
+  70% { right: 110vw; opacity: 0; }
+  100% { right: 110vw; opacity: 0; }
+}
+
+@keyframes moverPredio {
+  0% { right: -100vw; opacity: 0; }
+  10% { right: -10vw; opacity: 1; }
+  40% { right: 0vw; opacity: 1; }
+  70% { right: 110vw; opacity: 0; }
+  100% { right: 110vw; opacity: 0; }
+}
+
+@keyframes pipe-animation {
+  from { right: 0; }
+  to { right: 100%; }
+}
+
+@keyframes jump {
+  0% { bottom: 0; }
+  40% { bottom: 180px; }
+  50% { bottom: 180px; }
+  60% { bottom: 180px; }
+  100% { bottom: 0; }
+}
+
+@keyframes clouds-animation {
+  from { right: -550px; }
+  to { right: 100%; }
+}
+
+.score {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  color: #ffffff;
+  z-index: 10;
+}
+
+.hidden {
+  display: none;
+}
+
+.game-over {
+  position: absolute;
+  top: 200px;
+  width: 100%;
+  text-align: center;
+  font-size: 64px;
+  font-weight: bold;
+  color: red;
+  font-family: 'Press Start 2P', cursive;
+  z-index: 10;
+}
+
+.final-score {
+  font-size: 24px;
+  color: #fff;
+  display: block;
+  margin-top: 20px;
+}
